@@ -1,0 +1,32 @@
+name: support-env
+description: >
+  A reinforcement learning environment that simulates customer support workflows.
+  Agents must diagnose and resolve issues through multi-step actions.
+
+version: 0.1.0
+
+entry_point: env:SupportEnv
+
+observation_space:
+  type: object
+  properties:
+    issue:
+      type: string
+    current_step:
+      type: integer
+    steps_taken:
+      type: integer
+
+action_space:
+  type: string
+  description: Action taken by the agent (e.g., ask_issue, suggest_restart)
+
+reward_range: [0.0, 1.0]
+
+tasks:
+  - name: easy
+    description: Simple customer issues
+  - name: medium
+    description: Moderate complexity issues
+  - name: hard
+    description: Complex or varied issues

@@ -1,0 +1,18 @@
+[project]
+name = "openenv-done"
+version = "0.1.0"
+description = "Customer support RL environment"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "numpy",
+    "openai",
+    "requests",
+    "pydantic",
+    "openenv-core",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
